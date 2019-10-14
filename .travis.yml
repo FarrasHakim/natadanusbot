@@ -1,0 +1,24 @@
+language: python
+python:
+  - '3.6'
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache"
+cache:
+  paths:
+    - .cache/pip
+    - venv/
+stages:
+  - test
+env:
+  global:
+    - LINE_CHANNEL_SECRET=$LINE_CHANNEL_SECRET
+    - LINE_CHANNEL_ACCESS_TOKEN=$LINE_CHANNEL_ACCESS_TOKEN
+test:
+  script:
+    - apt-get update -q -y
+    - python --version
+    - pip install -r requirements.txt
+    - virtualenv venv
+    - source venv/bin/activate
+script:
+  - python -m unittest discover tests "test_*.py"

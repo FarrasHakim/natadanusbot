@@ -1,0 +1,14 @@
+/env/
+/venv/
+/.idea/
+/.gradle/
+/.vscode/
+/__pycache__/
+test
+env
+venv
+.env
+.venv
+*.exe
+*.pyo
+*.pyc

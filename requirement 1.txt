@@ -1,0 +1,2 @@
+1. bikin function parameter int return string
+2. bikin program masukin int return string (misal 1000000 jadi 1000k)
